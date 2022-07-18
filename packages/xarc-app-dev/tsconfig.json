@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "lib": ["es2018"],
+    "module": "CommonJS",
+    "esModuleInterop": true,
+    "target": "ES2018",
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "declaration": true,
+    "types": ["node"],
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "alwaysStrict": true,
+    "strictFunctionTypes": true,
+    "allowJs": true,
+    "importHelpers": true
+  },
+  "typedocOptions": {
+    "entryPointStrategy": "expand"
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "lib", "config", "dist", "src/**/*.js"]
+}

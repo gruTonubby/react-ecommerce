@@ -1,0 +1,29 @@
+---
+extends:
+  - "./js/es6-test.js"
+  - "./.eslintrc-react"
+globals:
+  document: false
+  expect: false
+  sinon: false
+  Element: false
+env:
+  mocha: true
+  browser: true
+plugins:
+  - flowtype
+  - react
+rules:
+  "no-unused-expressions": "off" # for `chai.expect`
+  "max-len": "off"
+  "max-statements": "off"
+  "max-nested-callbacks": "off"
+  "react/jsx-wrap-multilines": "warn"
+  "no-multi-spaces": "off"
+
+  "flowtype/define-flow-type": "warn"
+  "flowtype/use-flow-type": "warn"
+  "flowtype/require-valid-file-annotation": "error"
+  "func-style": ["off"]
+  "react/no-render-return-value": "warn"
+  "react/display-name": "warn"

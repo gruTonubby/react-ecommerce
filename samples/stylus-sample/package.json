@@ -1,0 +1,75 @@
+{
+  "name": "stylus-sample",
+  "version": "0.0.1",
+  "description": "Sample app that shows using stylus for CSS",
+  "homepage": "",
+  "author": {
+    "name": "Joel Chen",
+    "email": "joel123@gmail.com",
+    "url": ""
+  },
+  "contributors": [],
+  "files": [
+    "server",
+    "client",
+    "test"
+  ],
+  "main": "lib/server/index.js",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:electrode-io/electrode.git"
+  },
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">= 6",
+    "npm": ">= 3"
+  },
+  "scripts": {
+    "dev": "clap -q dev",
+    "prestart": "clap build",
+    "start": "if test \"$NODE_ENV\" = \"production\"; then npm run prod; else clap dev; fi",
+    "test": "clap check",
+    "coverage": "clap check",
+    "prod": "echo 'Starting standalone server in PROD mode'; NODE_ENV=production node ./lib/server/"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.12.5",
+    "@xarc/app": "^8.2.3",
+    "bluebird": "^3.4.6",
+    "electrode-archetype-opt-react": "^2.0.4",
+    "electrode-confippet": "^1.0.0",
+    "electrode-react-webapp": "^4.0.4",
+    "electrode-redux-router-engine": "^4.0.1",
+    "electrode-server": "^1.0.0",
+    "electrode-static-paths": "^1.0.0",
+    "lodash": "^4.10.1",
+    "milligram-stylus": "^1.3.0"
+  },
+  "devDependencies": {
+    "@xarc/app-dev": "^8.2.3",
+    "@xarc/opt-eslint": "^2.0.0",
+    "@xarc/opt-jest": "^1.0.0",
+    "@xarc/opt-karma": "^1.0.0",
+    "@xarc/opt-mocha": "^1.0.0",
+    "@xarc/opt-postcss": "^1.0.0",
+    "@xarc/opt-stylus": "^1.0.0",
+    "cheerio": "=1.0.0-rc.10"
+  },
+  "fyn": {
+    "dependencies": {
+      "@xarc/app": "../../packages/xarc-app",
+      "electrode-react-webapp": "../../packages/electrode-react-webapp",
+      "electrode-redux-router-engine": "../../packages/electrode-redux-router-engine"
+    },
+    "devDependencies": {
+      "@xarc/app-dev": "../../packages/xarc-app-dev",
+      "@xarc/opt-eslint": "../../packages/xarc-opt-eslint",
+      "@xarc/opt-jest": "../../packages/xarc-opt-jest",
+      "@xarc/opt-karma": "../../packages/xarc-opt-karma",
+      "@xarc/opt-mocha": "../../packages/xarc-opt-mocha",
+      "@xarc/opt-postcss": "../../packages/xarc-opt-postcss",
+      "@xarc/opt-stylus": "../../packages/xarc-opt-stylus"
+    }
+  }
+}

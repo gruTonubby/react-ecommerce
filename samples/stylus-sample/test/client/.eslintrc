@@ -1,0 +1,5 @@
+---
+extends:
+  - "../../node_modules/@xarc/app-dev/config/eslint/.eslintrc-react-test"
+
+
